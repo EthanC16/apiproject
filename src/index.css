@@ -8,29 +8,31 @@ body {
   background-color: rgba(255, 166, 0, 0.709);
 }
 
-
-
-.sun-image-carousel {
-  font-family: Arial, sans-serif;
+.header {
+  background-color: rgba(255, 255, 255, 0.62);
   padding: 20px;
-  max-width: 1000px;
-  margin: 0 auto;
 }
 
-.sun-image-carousel h1 {
+.button {
+  background-color: white; /* Green */
+  border: none;
+  color: black;
+  padding: 15px 32px;
   text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
 }
 
-.sun-image-carousel .carousel .slide img {
-  display: block;
-  margin: 0 auto;
-  max-width: 100%;
-  border-radius: 8px;
+.button-container {
+  margin-top: 10px;
 }
 
-.sun-image-carousel .error {
-  color: red;
-  text-align: center;
+.button:hover {
+  background-color: rgb(77, 77, 77);
+  color: white;
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.24), 0 4px 8px 0 rgba(0,0,0,0.19);
 }
 
 

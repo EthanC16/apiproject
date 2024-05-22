@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-const SunImageCarousel = () => {
+const SunImage = () => {
+  const [imageIndex, setImageIndex] = useState(0);
   const [images, setImages] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -18,7 +17,7 @@ const SunImageCarousel = () => {
       }
       const data = await response.json();
       const items = data.collection.items;
-      const imageUrls = items.map(item => item.links[0].href);
+      const imageUrls = items.map((item) => item.links[0].href);
       setImages(imageUrls);
     } catch (err) {
       setError(err.message);
@@ -27,26 +26,29 @@ const SunImageCarousel = () => {
     }
   };
 
+  const handleNextImage = () => {
+    const nextIndex = (imageIndex + 1) % images.length;
+    setImageIndex(nextIndex);
+  };
+
   useEffect(() => {
     fetchImages();
   }, []);
 
   return (
-    <div className="sun-image-carousel">
+    <div className="sun-image-container">
       <h2>Images taken from Nasa's image library</h2>
-      {loading && <p>Loading...</p>}
       {error && <p className="error">{error}</p>}
       {images.length > 0 && (
-        <Carousel showThumbs={false} infiniteLoop={true} autoPlay={true}>
-          {images.map((url, index) => (
-            <div key={index}>
-              <img src={url} alt={`Sun image ${index + 1}`} />
-            </div>
-          ))}
-        </Carousel>
+        <div>
+          <img src={images[imageIndex]} alt={`Sun image ${imageIndex + 1}`} />
+          <div className="button-container">
+          <button className="button" onClick={handleNextImage}>Next Image</button>
+          </div>
+        </div>
       )}
     </div>
   );
 };
 
-export default SunImageCarousel;
+export default SunImage;
