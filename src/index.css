@@ -1,13 +1,102 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family:'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgba(255, 166, 0, 0.709);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+
+.sun-image-carousel {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.sun-image-carousel h1 {
+  text-align: center;
+}
+
+.sun-image-carousel .carousel .slide img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.sun-image-carousel .error {
+  color: red;
+  text-align: center;
+}
+
+
+.solar-flare-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flexbox;
+}
+
+.solar-flare-container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.solar-flare-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.solar-flare-container li {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.solar-flare-container li strong {
+  font-weight: bold;
+}
+
+.solar-flare-container p.error-message {
+  color: #ff0000;
+  font-weight: bold;
+}
+
+.nasa-cme {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.nasa-cme h1 {
+  text-align: center;
+}
+
+.nasa-cme ul {
+  list-style: none;
+  padding: 0;
+}
+
+.nasa-cme li {
+  background: #f9f9f9;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nasa-cme li h2 {
+  margin-top: 0;
+}
+
+.nasa-cme .error {
+  color: red;
+  text-align: center;
 }
